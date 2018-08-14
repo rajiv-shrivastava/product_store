@@ -1,0 +1,1710 @@
+Started GET "/" for 127.0.0.1 at 2018-08-14 20:32:05 +0530
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (133.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (121.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBananas (20170709201024)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "bananas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170709201024"]]
+  [1m[35m (102.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20170710132024)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "admin" boolean DEFAULT 'f', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170710132024"]]
+  [1m[35m (118.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-14 15:02:15.887916"], ["updated_at", "2018-08-14 15:02:15.887916"]]
+  [1m[35m (85.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-08-14 20:32:35 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/banana" for 127.0.0.1 at 2018-08-14 20:32:43 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/banana"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bananas" for 127.0.0.1 at 2018-08-14 20:32:51 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/bananas"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/bananas" for 127.0.0.1 at 2018-08-14 20:33:01 +0530
+Processing by BananasController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (14.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "admin@mystore.com"], ["password_digest", "$2a$10$tQBrV9HJlMYhPHHNHmNuSuN8RZpH5d0tEm6eUZeJCYnFE1RAczo/C"], ["admin", "t"], ["created_at", "2018-08-14 15:09:37.407885"], ["updated_at", "2018-08-14 15:09:37.407885"]]
+  [1m[35m (159.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "user@mystore.com"], ["password_digest", "$2a$10$Fww8V80AluH0SWguS7kcROsflGuvdT4m.lPL/DRdj.Bo9K/XyFvAK"], ["created_at", "2018-08-14 15:09:37.702346"], ["updated_at", "2018-08-14 15:09:37.702346"]]
+  [1m[35m (66.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "admin@mystore.com"], ["password_digest", "$2a$10$pRMvRIVhxRSZZ2UqrhXG7u52v2p1Vpo1bR/7wq3ZZt2U9KMB9ILai"], ["admin", "t"], ["created_at", "2018-08-14 15:09:53.212940"], ["updated_at", "2018-08-14 15:09:53.212940"]]
+  [1m[35m (124.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "user@mystore.com"], ["password_digest", "$2a$10$pOH.WsNEACeBLxtcIgpgTu7q8QTCa/acjAk5pAvAoTA07Pow/D.Mi"], ["created_at", "2018-08-14 15:09:53.460219"], ["updated_at", "2018-08-14 15:09:53.460219"]]
+  [1m[35m (56.8ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 20:41:21 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 179ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-14 20:47:35 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (12.1ms)
+Completed 200 OK in 61ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 20:47:59 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 146ms (Views: 0.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/bananas" for 127.0.0.1 at 2018-08-14 20:48:14 +0530
+Processing by BananasController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBanana Load (0.2ms)[0m  [1m[34mSELECT "bananas".* FROM "bananas"[0m
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/bananas" for 127.0.0.1 at 2018-08-14 20:48:18 +0530
+Processing by BananasController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/bananas/1" for 127.0.0.1 at 2018-08-14 20:48:22 +0530
+Processing by BananasController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBanana Load (0.8ms)[0m  [1m[34mSELECT  "bananas".* FROM "bananas" WHERE "bananas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Banana with 'id'=1):
+  
+app/controllers/bananas_controller.rb:47:in `set_banana'
+Started GET "/api/bananas/1" for 127.0.0.1 at 2018-08-14 20:48:24 +0530
+Processing by BananasController#show as HTML
+  Parameters: {"id"=>"1"}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/bananas" for 127.0.0.1 at 2018-08-14 20:48:38 +0530
+Processing by BananasController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBanana Load (0.2ms)[0m  [1m[34mSELECT "bananas".* FROM "bananas"[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/bananas" for 127.0.0.1 at 2018-08-14 20:48:43 +0530
+Processing by BananasController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/bananas/1" for 127.0.0.1 at 2018-08-14 20:48:46 +0530
+Processing by BananasController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBanana Load (0.5ms)[0m  [1m[34mSELECT  "bananas".* FROM "bananas" WHERE "bananas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Banana with 'id'=1):
+  
+app/controllers/bananas_controller.rb:47:in `set_banana'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "bananas" ("name", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Big"], ["location", "none"], ["created_at", "2018-08-14 15:19:54.221980"], ["updated_at", "2018-08-14 15:19:54.221980"]]
+  [1m[35m (81.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBanana Load (0.4ms)[0m  [1m[34mSELECT  "bananas".* FROM "bananas" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/bananas/1" for 127.0.0.1 at 2018-08-14 20:50:04 +0530
+Processing by BananasController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBanana Load (0.2ms)[0m  [1m[34mSELECT  "bananas".* FROM "bananas" WHERE "bananas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/bananas/1" for 127.0.0.1 at 2018-08-14 20:51:25 +0530
+Processing by BananasController#show as */*
+  Parameters: {"id"=>"1"}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/bananas" for 127.0.0.1 at 2018-08-14 20:51:27 +0530
+Processing by BananasController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 20:51:42 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 121ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 20:52:27 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/bananas" for 127.0.0.1 at 2018-08-14 20:52:34 +0530
+Processing by BananasController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBanana Load (0.4ms)[0m  [1m[34mSELECT "bananas".* FROM "bananas"[0m
+Completed 200 OK in 11ms (Views: 4.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/bananas/1" for 127.0.0.1 at 2018-08-14 20:52:37 +0530
+Processing by BananasController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBanana Load (0.8ms)[0m  [1m[34mSELECT  "bananas".* FROM "bananas" WHERE "bananas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-14 21:00:57 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-08-14 21:00:58 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-14 21:05:23 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:07:12 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+actionpack (5.1.6) lib/action_controller/metal/strong_parameters.rb:437:in `require'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:44:in `auth_params'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:31:in `entity'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:10:04 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+actionpack (5.1.6) lib/action_controller/metal/strong_parameters.rb:437:in `require'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:44:in `auth_params'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:31:in `entity'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/user_token" for 127.0.0.1 at 2018-08-14 21:10:08 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/user_token"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:10:56 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+actionpack (5.1.6) lib/action_controller/metal/strong_parameters.rb:437:in `require'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:44:in `auth_params'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:31:in `entity'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/user_token" for 127.0.0.1 at 2018-08-14 21:12:41 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/user_token"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:12:51 +0530
+Processing by UserTokenController#create as */*
+  Parameters: {"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+actionpack (5.1.6) lib/action_controller/metal/strong_parameters.rb:437:in `require'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:44:in `auth_params'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:31:in `entity'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:13:29 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryUGp9JC3Bk5U4qAIX
+Content-Disposition: form-data; name="email"
+
+admin@mystore.com
+------WebKitFormBoundaryUGp9JC3Bk5U4qAIX
+Content-Disposition: form-data; name="password"
+
+adminpassword
+------WebKitFormBoundaryUGp9JC3Bk5U4qAIX--
+
+  
+ActionDispatch::Http::Parameters::ParseError (743: unexpected token at '------WebKitFormBoundaryUGp9JC3Bk5U4qAIX
+Content-Disposition: form-data; name="email"
+
+admin@mystore.com
+------WebKitFormBoundaryUGp9JC3Bk5U4qAIX
+Content-Disposition: form-data; name="password"
+
+adminpassword
+------WebKitFormBoundaryUGp9JC3Bk5U4qAIX--
+'):
+  
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:361:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:360:in `POST'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:14:05 +0530
+Processing by UserTokenController#create as */*
+  Parameters: {"{\n email:'admin@mystore.com'\n password:'adminpassword'\n}"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+actionpack (5.1.6) lib/action_controller/metal/strong_parameters.rb:437:in `require'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:44:in `auth_params'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:31:in `entity'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:21:05 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserTokenController#create as HTML
+  Parameters: {"email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+actionpack (5.1.6) lib/action_controller/metal/strong_parameters.rb:437:in `require'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:44:in `auth_params'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:31:in `entity'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/user_token" for 127.0.0.1 at 2018-08-14 21:21:08 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/user_token"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:21:22 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+actionpack (5.1.6) lib/action_controller/metal/strong_parameters.rb:437:in `require'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:44:in `auth_params'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:31:in `entity'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-14 21:21:35 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 12ms (Views: 8.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:21:57 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserTokenController#create as HTML
+  Parameters: {"email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+actionpack (5.1.6) lib/action_controller/metal/strong_parameters.rb:437:in `require'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:44:in `auth_params'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:31:in `entity'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:24:15 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 149ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-14 21:27:42 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:28:08 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 175ms (Views: 0.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-14 21:45:17 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:47:09 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 176ms (Views: 0.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 21:47:42 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 130ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 22:55:52 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (26.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 167ms (Views: 0.2ms | ActiveRecord: 26.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 22:58:18 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 133ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 22:58:30 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 131ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/user_token" for 127.0.0.1 at 2018-08-14 22:59:32 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/user_token"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:19:59 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:20:23 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 130ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:22:45 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:22:56 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 136ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:24:40 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:28:00 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:28:18 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 125ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:29:03 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:31:33 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:37:08 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:39:55 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:40:19 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:42:35 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 138ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:44:33 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:46:10 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (191.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 315ms (Views: 0.2ms | ActiveRecord: 191.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:48:18 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 191ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:48:55 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 133ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-14 23:51:01 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 130ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:01:30 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 139ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:02:10 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:04:28 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 147ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:04:32 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 139ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:09:28 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:10:16 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 125ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:12:56 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:14:58 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 141ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:15:40 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:17:18 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 173ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:17:28 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 175ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:18:54 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:19:08 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:19:15 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 131ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:19:29 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 160ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:20:22 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 141ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:20:31 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:21:35 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 134ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:22:57 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 137ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:24:26 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:25:05 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 167ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:25:25 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 175ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:27:21 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:27:45 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 154ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:28:04 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:28:31 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 165ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:31:01 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:31:45 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:31:53 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 134ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:31:59 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 176ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:32:14 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 138ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:32:51 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:33:12 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 133ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:33:24 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 133ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:33:46 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 166ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:35:06 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 195ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:35:27 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:38:25 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 142ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:41:05 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:44:45 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (38.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 163ms (Views: 0.3ms | ActiveRecord: 38.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:45:12 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 153ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:46:14 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:55:32 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:56:13 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:56:25 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 133ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:56:35 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 163ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:57:40 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 160ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:58:04 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 149ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 00:58:34 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 147ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:00:42 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 139ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:01:45 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 135ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:02:07 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:02:40 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:03:06 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 131ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:05:17 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 152ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:11:54 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:13:56 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:14:25 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:14:43 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 125ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:16:12 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 139ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:16:22 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 146ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:17:09 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 125ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:19:31 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 168ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:19:55 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-15 01:33:05 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rajiv/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (166.1ms)
+Completed 200 OK in 389ms (Views: 178.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 01:48:22 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (37.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 256ms (Views: 0.4ms | ActiveRecord: 37.6ms)
+
+
