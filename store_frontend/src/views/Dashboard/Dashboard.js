@@ -1,38 +1,19 @@
 import React, { Component } from 'react';
-import { Bar, Line } from 'react-chartjs-2';
 import {
-  Badge,
-  Button,
-  ButtonDropdown,
-  ButtonGroup,
-  ButtonToolbar,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  Col,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Progress,
-  Row,
-  Table,
+  Card,CardBody,CardFooter,CardHeader,CardTitle,Col,
+  Row,Table,
 } from 'reactstrap';
-import Widget03 from '../../views/Widgets/Widget03'
-import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
-import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
+import { fetchProducts} from '../../actions/actionProducts';
+import { connect } from 'react-redux';
 
-const brandPrimary = getStyle('--primary')
-const brandSuccess = getStyle('--success')
-const brandInfo = getStyle('--info')
-const brandWarning = getStyle('--warning')
-const brandDanger = getStyle('--danger')
 
 class Dashboard extends Component {
-  render() {
 
+  componentDidMount() {
+    this.props.fetchProducts().then(() => console.log("error")).catch(
+      (err) => console.log(err))
+  }
+  render() {
     return (
       <div className="animated fadeIn">
         <Row>
@@ -66,4 +47,13 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => {
+  return {
+    questions: state.graphs.all || []
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  { fetchProducts}
+)(Dashboard);
