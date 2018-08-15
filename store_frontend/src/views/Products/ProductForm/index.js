@@ -27,6 +27,7 @@ import {
 import { connect } from 'react-redux';
 import {fetchProducts, createProduct,updateProduct,fetchProduct} from '../../../actions/actionProducts'
 import history from '../../../history';
+import {NotificationManager} from 'react-notifications';
 
 class ProductForm extends Component {
   constructor(props) {
@@ -41,11 +42,26 @@ class ProductForm extends Component {
     };
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.updateState = this.updateState.bind(this)
   }
 
   componentDidMount(){
     const {productId,fromCreate} = this.props
-    !fromCreate ? this.props.fetchProduct(productId) : ''
+    !fromCreate ? this.props.fetchProduct(productId).then(
+      () => this.updateState()
+      ) : ''
+  }
+
+  updateState(){
+    const {getProduct} = this.props
+    let productData ={
+        name: getProduct.name,
+        price: getProduct.price,
+        margin: getProduct.margin,
+        total_sales: getProduct.total_sales
+    } 
+
+    this.setState({productData: productData})
   }
 
 
@@ -60,14 +76,16 @@ class ProductForm extends Component {
   handleSubmit(e){
     e.preventDefault()
     const {productData} = this.state
-    const {fromCreate} = this.props
+    const {fromCreate,productId} = this.props
     if(fromCreate){
-     this.props.createProduct(productData)
+     this.props.createProduct(productData).then(
+      () => NotificationManager.info('Product Create'))
     }
     else{
       let data = productData
-      data.id = this.props.match.params.id
-      this.props.updateProduct(productData)
+      data.id =  productId
+      this.props.updateProduct(productData).then(
+         () => NotificationManager.info('Product Upated'))
     }
   }
 

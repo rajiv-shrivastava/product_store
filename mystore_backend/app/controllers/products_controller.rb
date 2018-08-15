@@ -47,6 +47,16 @@ class ProductsController < ApplicationController
     render @product
   end
 
+  def updateproduct
+    @product = Product.find(params[:id])
+    @product.name = params[:name]
+    @product.price = params[:price]
+    @product.margin = params[:margin]
+    @product.total_sales = params[:total_sales]
+    if @product.save
+      render @product
+    end
+  end
 
 
   private

@@ -21,6 +21,8 @@ import routes from '../../routes';
 import DefaultAside from './DefaultAside';
 import DefaultFooter from './DefaultFooter';
 import DefaultHeader from './DefaultHeader';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer} from 'react-notifications';
 
 class DefaultLayout extends Component {
   render() {
@@ -59,6 +61,7 @@ class DefaultLayout extends Component {
         <AppFooter>
           <DefaultFooter />
         </AppFooter>
+        <NotificationContainer />
       </div>
     );
   }

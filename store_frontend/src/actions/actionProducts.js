@@ -25,7 +25,7 @@ export function addSales(id) {
 export function updateProduct(data) {
   return {
     type: 'UPDATE_PRODUCTS',
-    payload: api.put(`product/${data.id}`, data),
+    payload: api.post(`updateproduct`, data),
   };
 }
 

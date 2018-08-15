@@ -35,10 +35,6 @@ import { connect } from 'react-redux';
        Cell: row => (
            <div>
                <Link 
-                to={`/viewproduct/${row.original.id}`}>
-                <i className="fa fa-eye"> </i>
-               </Link> &nbsp;&nbsp; &nbsp;
-               <Link 
                 to={'#'}
                 onClick={() => this.handleDelete(row.original.id)}
                 >
@@ -49,7 +45,10 @@ import { connect } from 'react-redux';
                   pathname: `/products/updateproduct/${row.original.id}`,
                   state: { id: row.original.id }
                  }}
-                />
+                >
+                <i className="fa fa-pencil"> </i>
+                </Link>&nbsp;&nbsp;&nbsp;
+
                <Button
                 onClick={() => this.handleSales(row.original.id)} 
                 >
@@ -64,10 +63,6 @@ import { connect } from 'react-redux';
 			  defaultPageSize={4}
 			  columns={columns}
 		  />)
-  }
-
-  handleEdit = () => {
-
   }
 
   handleDelete = (id) => {
