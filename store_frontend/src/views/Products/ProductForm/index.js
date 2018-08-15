@@ -56,9 +56,7 @@ class ProductForm extends Component {
   handleSubmit(e){
     e.preventDefault()
     const {productData} = this.state
-    history.push('/')
-    // this.props.createProduct(productData).then(
-      // () => history.push("/products"))
+    this.props.createProduct(productData)
   }
 
 

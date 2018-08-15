@@ -66,11 +66,6 @@ export default class LineChart extends Component {
         <Card>
               <CardHeader>
                 Line Chart
-                <div className="card-header-actions">
-                  <a href="http://www.chartjs.org" className="card-header-action">
-                    <small className="text-muted">docs</small>
-                  </a>
-                </div>
               </CardHeader>
               <CardBody>
                 <div className="chart-wrapper">

@@ -8,6 +8,7 @@ import {
 } from 'reactstrap';
 import LineChart from './Charts/LineChart'
 import BarChart from './Charts/BarChart'
+import PieChart from './Charts/PieChart'
 
 class Dashboard extends Component {
 
@@ -50,18 +51,27 @@ class Dashboard extends Component {
             </Card>
           </Col>
         </Row>
-        <Row> 
-          <Col sm="10"> 
-           {products.length > 0 ?
-             <LineChart products={products}/> : ''} 
-          </Col> 
-        </Row>
-        <Row> 
-         <Col sm="10">
-         { products.length > 0 ?
-           <BarChart products={products}/> : ''}
-          </Col>
-        </Row>
+        {products.length > 0 ?
+          <div>
+          <Row> 
+            <Col sm="10">  
+               <LineChart products={products}/> : ''} 
+            </Col> 
+          </Row>
+          <Row> 
+           <Col sm="10">
+             <BarChart products={products}/>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm="10">
+             <PieChart products={products}/>
+            </Col>  
+          </Row>
+          </div> 
+          : 
+          'Loading....'
+        }
       </div>
     );
   }
