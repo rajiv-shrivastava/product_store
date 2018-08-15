@@ -1,14 +1,7 @@
 import api from './api';
 
-export function deleteCompany(companyId) {
-  return {
-    type: 'REMOVE_COMPANY',
-    payload: api.delete(`companies/${companyId}`),
-    meta: {
-      id: companyId,
-    },
-  };
-}
+
+
 
 export function addCompany(company) {
   return {

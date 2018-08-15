@@ -22,10 +22,19 @@ export function addSales(id) {
   };
 }
 
-
 export function updateProduct(data) {
   return {
     type: 'UPDATE_PRODUCTS',
-    payload: api.post(`product/${data.productId}`, data),
+    payload: api.put(`product/${data.productId}`, data),
   };
 }
+
+
+export function deleteProduct(id) {
+  return {
+    type: 'DELETE_PRODUCT',
+    payload: api.get(`products/deleteproduct/${id}`),
+  };
+}
+
+

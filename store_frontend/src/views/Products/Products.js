@@ -3,7 +3,7 @@ import { CardGroup, Col, Row,Button } from 'reactstrap';
 import {Link} from 'react-router-dom';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import { fetchProducts,addSales} from '../../actions/actionProducts';
+import { fetchProducts,addSales,deleteProduct} from '../../actions/actionProducts';
 import { connect } from 'react-redux';
 
  class Products extends Component {
@@ -39,11 +39,13 @@ import { connect } from 'react-redux';
                 <i className="fa fa-eye"> </i>
                </Link> &nbsp;&nbsp; &nbsp;
                <Link 
-                to={`/viewproduct/${row.original.id}`}>
+                to={'#'}
+                onClick={() => this.handleDelete(row.original.id)}
+                >
                 <i className="fa fa-trash"> </i>
                </Link> &nbsp;&nbsp;&nbsp;
                <Link 
-                to={`/viewproduct/${row.original.id}`}>
+                to={`/products/updateproduct/${row.original.id}`}>
                 <i className="fa fa-pencil"> </i>
                </Link> &nbsp;&nbsp;&nbsp;
                <Button
@@ -66,13 +68,14 @@ import { connect } from 'react-redux';
 
   }
 
-  handleDelete = () => {
-
+  handleDelete = (id) => {
+     this.props.deleteProduct(id).then(
+      () => this.props.fetchProducts())
   }
 
   handleSales = (id) => {
-    console.log(id)
-    this.props.addSales(id)
+    this.props.addSales(id).then(
+      () => this.props.fetchProducts())
   }
 
 
@@ -104,5 +107,5 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps,
-  { addSales,fetchProducts}
+  { addSales,deleteProduct,fetchProducts}
 )(Products);

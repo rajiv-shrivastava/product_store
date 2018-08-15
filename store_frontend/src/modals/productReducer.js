@@ -3,7 +3,8 @@ const INITIAL_STATE = {
 	products: [],
 	createProduct: null,
 	updateProduct: null,
-  productSale: null
+  productSale: null,
+  productDelete: null
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -28,6 +29,12 @@ export default function (state = INITIAL_STATE, action) {
         ...state, 
         productSale: action.payload.data 
       }
+      case `DELETE_PRODUCT_SUCCESS`:
+      return { 
+        ...state, 
+        productDelete: action.payload.data 
+      }
+      
       
     default:
       return state;
