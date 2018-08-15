@@ -7940,3 +7940,135 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:06:44 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:07:07 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:07:33 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:07:40 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:07:43 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products/2" for 127.0.0.1 at 2018-08-16 00:07:46 +0530
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/updateproduct" for 127.0.0.1 at 2018-08-16 00:07:49 +0530
+Processing by ProductsController#updateproduct as HTML
+  Parameters: {"name"=>"raji", "price"=>1500, "margin"=>21, "total_sales"=>"101", "id"=>"2", "product"=>{"id"=>"2", "name"=>"raji", "price"=>1500, "margin"=>21, "total_sales"=>"101"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "products" SET "total_sales" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["total_sales", 101], ["updated_at", "2018-08-15 18:37:49.820216"], ["id", 2]]
+  [1m[35m (83.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 92ms (Views: 0.2ms | ActiveRecord: 85.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:07:53 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/products" for 127.0.0.1 at 2018-08-16 00:08:06 +0530
+Processing by ProductsController#create as HTML
+  Parameters: {"name"=>"product b", "price"=>"1212", "margin"=>"11", "total_sales"=>"11212", "product"=>{"name"=>"product b", "price"=>"1212", "margin"=>"11", "total_sales"=>"11212"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "margin", "created_at", "updated_at", "total_sales") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "product b"], ["price", 1212], ["margin", 11], ["created_at", "2018-08-15 18:38:06.135301"], ["updated_at", "2018-08-15 18:38:06.135301"], ["total_sales", 11212]]
+  [1m[35m (263.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 268ms (Views: 0.7ms | ActiveRecord: 264.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:10:39 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:10:56 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:11:37 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:11:45 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:11:47 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products/2" for 127.0.0.1 at 2018-08-16 00:11:48 +0530
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/updateproduct" for 127.0.0.1 at 2018-08-16 00:11:52 +0530
+Processing by ProductsController#updateproduct as HTML
+  Parameters: {"name"=>"raji", "price"=>"1501", "margin"=>21, "total_sales"=>101, "id"=>"2", "product"=>{"id"=>"2", "name"=>"raji", "price"=>"1501", "margin"=>21, "total_sales"=>101}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 1501], ["updated_at", "2018-08-15 18:41:52.144393"], ["id", 2]]
+  [1m[35m (90.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 101ms (Views: 0.2ms | ActiveRecord: 93.1ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-16 00:11:55 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.7ms)
+
+

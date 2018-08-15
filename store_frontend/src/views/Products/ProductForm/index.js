@@ -27,7 +27,8 @@ import {
 import { connect } from 'react-redux';
 import {fetchProducts, createProduct,updateProduct,fetchProduct} from '../../../actions/actionProducts'
 import history from '../../../history';
-import {NotificationManager} from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
+import {NotificationManager,NotificationContainer} from 'react-notifications';
 
 class ProductForm extends Component {
   constructor(props) {
@@ -79,13 +80,15 @@ class ProductForm extends Component {
     const {fromCreate,productId} = this.props
     if(fromCreate){
      this.props.createProduct(productData).then(
-      () => NotificationManager.info('Product Create'))
+      () => NotificationManager.success('Product Create Success')).
+      catch(() => () => NotificationManager.error('Product Create Error'))  
     }
     else{
       let data = productData
       data.id =  productId
-      this.props.updateProduct(productData).then(
-         () => NotificationManager.info('Product Upated'))
+      this.props.updateProduct(productData).then(() => 
+        NotificationManager.success('Product Update Success')).
+      catch(() => () => NotificationManager.error('Product Update Error'))
     }
   }
 
@@ -96,6 +99,7 @@ class ProductForm extends Component {
     const {fromCreate} = this.props
     return (
       <div className="animated fadeIn">
+                <NotificationContainer />
         <Row>
           <Col xs="12" sm={{ size: 6, order: 2, offset: 3 }}>
             <Form onSubmit={this.handleSubmit}>
