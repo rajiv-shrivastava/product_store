@@ -7376,3 +7376,104 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:10:58 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:12:30 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:14:31 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:19:30 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:22:33 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:22:35 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:25:04 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:25:14 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:26:09 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:27:46 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 23:32:23 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products/2" for 127.0.0.1 at 2018-08-15 23:41:03 +0530
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products/2" for 127.0.0.1 at 2018-08-15 23:41:36 +0530
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products/2" for 127.0.0.1 at 2018-08-15 23:41:58 +0530
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+

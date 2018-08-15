@@ -25,7 +25,7 @@ import {
   Row,
 } from 'reactstrap';
 import { connect } from 'react-redux';
-import {fetchProducts, createProduct,updateProduct} from '../../../actions/actionProducts'
+import {fetchProducts, createProduct,updateProduct,fetchProduct} from '../../../actions/actionProducts'
 import history from '../../../history';
 
 class ProductForm extends Component {
@@ -43,6 +43,11 @@ class ProductForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  componentDidMount(){
+    const {productId,fromCreate} = this.props
+    !fromCreate ? this.props.fetchProduct(productId) : ''
+  }
+
 
   handleChange(e){
     let name = e.target.name
@@ -55,7 +60,15 @@ class ProductForm extends Component {
   handleSubmit(e){
     e.preventDefault()
     const {productData} = this.state
-    this.props.createProduct(productData)
+    const {fromCreate} = this.props
+    if(fromCreate){
+     this.props.createProduct(productData)
+    }
+    else{
+      let data = productData
+      data.id = this.props.match.params.id
+      this.props.updateProduct(productData)
+    }
   }
 
 
@@ -135,11 +148,12 @@ class ProductForm extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.product.products || []
+    products: state.product.products || [],
+    getProduct: state.product.getProduct || null
   };
 }
 
 export default connect(
   mapStateToProps,
-  { fetchProducts, createProduct,updateProduct}
+  { fetchProduct,createProduct,updateProduct,fetchProducts}
 )(ProductForm);

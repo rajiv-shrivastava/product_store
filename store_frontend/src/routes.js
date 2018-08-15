@@ -32,14 +32,12 @@ const UpdateProduct = Loadable({
   loading: Loading,
 });
 
-
-
 const routes = [
   { path: '/', exact: true, name: 'Home', component: DefaultLayout },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/products', exact: true, name: 'Products', component: Products },
   { path: '/products/createproduct', name: 'CreateProduct', component: CreateProduct },
-  { path: '/products/updateproduct/:id', name: 'UpdateProduct', component: UpdateProduct }
+  { path: '/products/updateproduct/:id',exact: true, name: 'UpdateProduct', component: UpdateProduct }
 ];
 
 export default routes;

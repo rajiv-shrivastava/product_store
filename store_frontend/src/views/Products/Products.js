@@ -43,11 +43,13 @@ import { connect } from 'react-redux';
                 onClick={() => this.handleDelete(row.original.id)}
                 >
                 <i className="fa fa-trash"> </i>
-               </Link> &nbsp;&nbsp;&nbsp;
-               <Link 
-                to={`/products/updateproduct/${row.original.id}`}>
-                <i className="fa fa-pencil"> </i>
-               </Link> &nbsp;&nbsp;&nbsp;
+                </Link> &nbsp;&nbsp;&nbsp;
+                
+                <Link to={{
+                  pathname: `/products/updateproduct/${row.original.id}`,
+                  state: { id: row.original.id }
+                 }}
+                />
                <Button
                 onClick={() => this.handleSales(row.original.id)} 
                 >
@@ -102,7 +104,7 @@ import { connect } from 'react-redux';
 const mapStateToProps = (state) => {
   return {
     products: state.product.products || []
-  };
+  }
 }
 
 export default connect(

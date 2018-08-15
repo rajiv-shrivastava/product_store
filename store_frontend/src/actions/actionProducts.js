@@ -25,9 +25,10 @@ export function addSales(id) {
 export function updateProduct(data) {
   return {
     type: 'UPDATE_PRODUCTS',
-    payload: api.put(`product/${data.productId}`, data),
+    payload: api.put(`product/${data.id}`, data),
   };
 }
+
 
 
 export function deleteProduct(id) {
@@ -36,5 +37,13 @@ export function deleteProduct(id) {
     payload: api.get(`products/deleteproduct/${id}`),
   };
 }
+
+export function fetchProduct(id) {
+  return {
+    type: 'GET_PRODUCT',
+    payload: api.get(`products/${id}`),
+  };
+}
+
 
 

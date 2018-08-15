@@ -4,7 +4,8 @@ const INITIAL_STATE = {
 	createProduct: null,
 	updateProduct: null,
   productSale: null,
-  productDelete: null
+  productDelete: null,
+  getProduct: null
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -34,6 +35,14 @@ export default function (state = INITIAL_STATE, action) {
         ...state, 
         productDelete: action.payload.data 
       }
+
+      case `GET_PRODUCT_SUCCESS`:
+      return { 
+        ...state, 
+        getProduct: action.payload.data 
+      }
+
+      
       
       
     default:
