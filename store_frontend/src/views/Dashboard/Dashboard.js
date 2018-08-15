@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import {
-  Card,CardBody,CardFooter,CardHeader,CardTitle,Col,
-  Row,Table,
-} from 'reactstrap';
 import { fetchProducts} from '../../actions/actionProducts';
 import { getToken} from '../../actions/actionAuth';
 import { connect } from 'react-redux';
-
+import {
+  Card,CardBody,CardFooter,CardHeader,CardTitle,Col,
+  Row,Table,CardColumns
+} from 'reactstrap';
+import LineChart from './Charts/LineChart'
+import BarChart from './Charts/BarChart'
 
 class Dashboard extends Component {
 
@@ -48,6 +49,11 @@ class Dashboard extends Component {
             </Card>
           </Col>
         </Row>
+
+        <Row>
+         <LineChart />
+         <BarChart />      
+      </Row>
       </div>
     );
   }

@@ -21,6 +21,7 @@ import { Login, Page404, Page500 } from './views/Pages';
 // import { renderRoutes } from 'react-router-config';
 import { Provider } from 'react-redux';
 import configureStore from './store';
+import history from './history';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
@@ -37,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-      <HashRouter>
+      <HashRouter history={history}>
         <Switch>
           <Route exact path="/login" name="Login Page" component={Login} />
           <Route exact path="/404" name="Page 404" component={Page404} />

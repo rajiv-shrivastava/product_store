@@ -24,87 +24,108 @@ import {
   Label,
   Row,
 } from 'reactstrap';
+import { connect } from 'react-redux';
+import {fetchProducts, createProduct,updateProduct} from '../../../actions/actionProducts'
+import history from '../../../history';
 
-export default class ProductForm extends Component {
+class ProductForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       productData: {
-        productName: '',
-        productPrice: '',
-        productMargin: '',
-        totalSold: ''
+        name: '',
+        price: '',
+        margin: '',
+        total_sales: ''
       }
     };
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChange = (e) => {
+
+  handleChange(e){
     let name = e.target.name
     let value = e.target.value
     let {productData} = this.state
     productData[name] = value
     this.setState({productData: productData})
+    console.log("thisasasd",this.state.productData)
   }
- 
 
+  handleSubmit(e){
+    e.preventDefault()
+    const {productData} = this.state
+    history.push('/')
+    // this.props.createProduct(productData).then(
+      // () => history.push("/products"))
+  }
+
+
+ 
   render() {
     const {productData} = this.state
+    const {fromCreate} = this.props
     return (
       <div className="animated fadeIn">
         <Row>
           <Col xs="12" sm={{ size: 6, order: 2, offset: 3 }}>
-            <Form>
+            <Form onSubmit={this.handleSubmit}>
             <Card>
               <CardHeader>
-                <strong>Create</strong>
+                <strong>{fromCreate ? 'Create': 'Update'}</strong>
                 <small> Product</small>
               </CardHeader>
               <CardBody>
                 <FormGroup>
-                  <Label htmlFor="productName">Product Name</Label>
+                  <Label htmlFor="name">Product Name</Label>
                   <Input 
                     type="text" 
-                    id="productName"
-                    name="productName" 
+                    id="name"
+                    name="name" 
                     placeholder="Enter product name"
-                    defaultValue ={productData.productName}
+                    defaultValue ={productData.name}
                     onChange={this.handleChange}
                     required
                      />
                 </FormGroup>
                 <FormGroup>
-                  <Label htmlFor="productPrice">Product Price</Label>
+                  <Label htmlFor="price">Product Price($)</Label>
                   <Input 
-                    type="text" 
-                    id="productPrice" 
-                    name="productPrice"
+                    type="number" 
+                    id="price" 
+                    name="price"
                     placeholder="Enter product price"
-                    defaultValue ={productData.productPrice}
+                    defaultValue ={productData.price}
                     onChange={this.handleChange}
+                    required
                     />
                 </FormGroup>
                 <FormGroup>
                   <Label htmlFor="company">Product Margin(%)</Label>
                   <Input 
-                  type="text" 
-                  id="productMargin" 
-                  placeholder="Enter product profit margin" 
-                  defaultValue ={productData.productMargin}
+                  type="number" 
+                  id="margin"
+                  name="margin"  
+                  defaultValue ={productData.margin}
                   onChange={this.handleChange}
+                  required
                   />
                 </FormGroup>
                 <FormGroup>
                   <Label htmlFor="company">Product Units Sold</Label>
                   <Input 
-                    type="text"
-                    id="totalSold"
+                    type="number"
+                    id="total_sales"
+                    name="total_sales"
                     placeholder="Enter total units sold"
-                    defaultValue ={productData.totalSold}
+                    defaultValue ={productData.total_sales}
                     onChange={this.handleChange}
+                    required
                      />
                 </FormGroup>                
               </CardBody>   
-              <Button type="submit"> Create </Button>           
+              <Button type="submit">{fromCreate ? 'Create': 'Update'} </Button>           
             </Card>            
             </Form>
           </Col>
@@ -115,3 +136,13 @@ export default class ProductForm extends Component {
 }
 
 
+const mapStateToProps = (state) => {
+  return {
+    products: state.product.products || []
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  { fetchProducts, createProduct,updateProduct}
+)(ProductForm);

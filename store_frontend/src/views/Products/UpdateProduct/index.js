@@ -1,9 +1,8 @@
 import React,{Component} from 'react'
+import ProductForm from '../ProductForm'
 
 export default class UpdateProduct extends Component {
 	render(){
-		return(
-			 <div> UpdateProduct </div>
-			)
+		return(<ProductForm fromCreate={false} />)
 	}
 }
