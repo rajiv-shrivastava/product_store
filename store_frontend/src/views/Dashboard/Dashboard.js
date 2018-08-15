@@ -4,14 +4,21 @@ import {
   Row,Table,
 } from 'reactstrap';
 import { fetchProducts} from '../../actions/actionProducts';
+import { getToken} from '../../actions/actionAuth';
+
 import { connect } from 'react-redux';
 
 
 class Dashboard extends Component {
 
   componentDidMount() {
-    this.props.fetchProducts().then(() => console.log("error")).catch(
-      (err) => console.log(err))
+    const userData = {auth: {
+      email: 'admin@mystore.com',
+      password: 'adminpassword'
+    }}
+    this.props.getToken(userData).then(
+      () => this.props.fetchProducts() 
+      )
   }
   render() {
     return (
@@ -55,5 +62,5 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps,
-  { fetchProducts}
+  { getToken,fetchProducts}
 )(Dashboard);

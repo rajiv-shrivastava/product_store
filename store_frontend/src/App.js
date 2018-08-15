@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch,Redirect } from 'react-router-dom';
 import './App.css';
 // Styles
 // CoreUI Icons Set
@@ -16,12 +16,22 @@ import './scss/style.css'
 // Containers
 import { DefaultLayout } from './containers';
 // Pages
-import { Login, Page404, Page500, Register } from './views/Pages';
+import { Login, Page404, Page500 } from './views/Pages';
 
 // import { renderRoutes } from 'react-router-config';
 import { Provider } from 'react-redux';
 import configureStore from './store';
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route {...rest} render={(props) => (
+    localStorage.getItem('user') === null
+      ? <Component {...props} />
+      : <Redirect to='/login' />
+  )} />
+)
+
 const store = configureStore();
+const Protected = () => <h3>Protected</h3>
 
 class App extends Component {
   render() {
@@ -30,10 +40,10 @@ class App extends Component {
       <HashRouter>
         <Switch>
           <Route exact path="/login" name="Login Page" component={Login} />
-          <Route exact path="/register" name="Register Page" component={Register} />
           <Route exact path="/404" name="Page 404" component={Page404} />
           <Route exact path="/500" name="Page 500" component={Page500} />
           <Route path="/" name="Home" component={DefaultLayout} />
+          <PrivateRoute path='/protected' component={Protected} />
         </Switch>
       </HashRouter>
       </Provider>
