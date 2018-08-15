@@ -1,7 +1,6 @@
 import axios from 'axios';
 import {AUTH_TOKEN} from '../constants'
 
-console.log("AUTH_TOKEN",AUTH_TOKEN)
 
 const makeHeaders = () => {
  if(AUTH_TOKEN !== null 

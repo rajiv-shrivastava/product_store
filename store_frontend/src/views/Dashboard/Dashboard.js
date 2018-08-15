@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { fetchProducts} from '../../actions/actionProducts';
-import { getToken} from '../../actions/actionAuth';
 import { connect } from 'react-redux';
 import {
   Card,CardBody,CardFooter,CardHeader,CardTitle,Col,
@@ -12,20 +11,13 @@ import PieChart from './Charts/PieChart'
 
 class Dashboard extends Component {
 
-  componentDidMount() {
-    const userData = {auth: {
-      email: 'admin@mystore.com',
-      password: 'adminpassword'
-    }}
-    this.props.getToken(userData).then(
-      () => this.props.fetchProducts() 
-      )
+  componentDidMount() {    
+    this.props.fetchProducts()   
   }
 
   returnBoxes = (products) => {
-    console.log("products=======",products)
     let boxes = products.map((prod,i) =>
-      <Col xs="12" sm="6" lg="3">
+      <Col key={i} xs="12" sm="6" lg="3">
             <Card 
               className={`text-white ${i% 2 == 0 ? 'bg-danger' : i% 3 == 0 ? 
                    'bg-info' : 'bg-warning'}`}>
@@ -41,6 +33,7 @@ class Dashboard extends Component {
   }
 
   render() {
+
     const {products} = this.props
     return (
       <div className="animated fadeIn">
@@ -82,5 +75,5 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps,
-  { getToken,fetchProducts}
+  {fetchProducts}
 )(Dashboard);

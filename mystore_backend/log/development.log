@@ -4869,3 +4869,1095 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:03:34 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:03:53 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:04:07 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:04:36 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:04:39 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:04:39 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:04:41 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:04:43 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:04:43 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:04:56 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 124ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:04:56 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:05:05 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 131ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:05:05 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:05:09 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:05:10 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:05:10 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:06:10 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:06:10 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:09:17 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:09:17 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:09:35 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:09:49 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 125ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:09:50 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:09:52 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:10:24 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:11:36 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:11:39 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 142ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:11:43 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 133ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:11:43 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:13:27 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:13:27 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:25:40 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 133ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:25:40 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:26:03 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:26:08 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:26:28 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:26:42 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:27:05 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:27:05 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:27:34 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:27:35 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (25.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 32ms (Views: 3.9ms | ActiveRecord: 25.9ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:01 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 144ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:01 +0530
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:01 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:01 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:01 +0530
+Processing by UserTokenController#create as HTML
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+Completed 201 Created in 195ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:01 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 456ms (Views: 0.3ms | ActiveRecord: 9.0ms)
+
+
+Completed 201 Created in 477ms (Views: 0.2ms | ActiveRecord: 169.6ms)
+
+
+Completed 201 Created in 256ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Completed 201 Created in 430ms (Views: 0.2ms | ActiveRecord: 43.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:02 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:02 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:02 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:02 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 410ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Completed 201 Created in 276ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:02 +0530
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:02 +0530
+Completed 201 Created in 419ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:03 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+Completed 201 Created in 275ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Completed 201 Created in 425ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:03 +0530
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:03 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 277ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:03 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 417ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:28:03 +0530
+Processing by UserTokenController#create as HTML
+Completed 201 Created in 158ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 493ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Completed 201 Created in 547ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Completed 201 Created in 190ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:30:48 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 138ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:30:48 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:30:51 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:30:51 +0530
+Completed 201 Created in 129ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 130ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:30:51 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (24.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 32ms (Views: 4.9ms | ActiveRecord: 24.5ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:31:34 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:31:34 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:31:54 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 130ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:31:54 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:31:58 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:31:58 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:32:01 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:32:03 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:32:03 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:33:32 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:33:32 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:33:35 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:33:35 +0530
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:33:35 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:33:39 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:33:42 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:33:43 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:33:47 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:34:14 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:34:22 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:34:27 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:34:35 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:34:51 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:34:58 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:35:00 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 121ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:35:01 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 123ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:35:02 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:35:14 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:35:14 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:36:17 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 131ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:36:18 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:36:26 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 157ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:36:26 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:36:31 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 150ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:36:31 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:36:39 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 129ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:36:39 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:37:07 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 149ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:37:07 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:37:23 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 123ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:37:24 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 122ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:37:26 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:37:26 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:38:47 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 227ms (Views: 0.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:38:48 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 28ms (Views: 10.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:39:10 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:39:15 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:39:21 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 128ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:39:21 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:39:40 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:39:40 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:39:53 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:39:57 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:40:22 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:40:24 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 122ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:40:40 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 174ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:41:03 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 132ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:41:03 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:41:05 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 127ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:41:06 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:41:07 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 130ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:41:13 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 126ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:41:13 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:43:46 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 123ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:43:59 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 141ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:44:00 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:44:32 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 122ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:44:33 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:44:43 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:45:12 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:45:30 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:46:20 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:47:16 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 149ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:47:16 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:47:47 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 19:50:26 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Completed 201 Created in 124ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:50:27 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 19:50:31 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 20:27:57 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"ad"}, "email"=>"adm"}, "email"=>"admi"}, "email"=>"admin"}, "email"=>"admin@"}, "email"=>"admin@m"}, "email"=>"admin@my"}, "email"=>"admin@mys"}, "email"=>"admin@myst"}, "email"=>"admin@mysto"}, "email"=>"admin@mystor"}, "email"=>"admin@mystore"}, "email"=>"admin@mystore."}, "email"=>"admin@mystore.c"}, "email"=>"admin@mystore.co"}, "email"=>"admin@mystore.com"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"ad"}, "email"=>"adm"}, "email"=>"admi"}, "email"=>"admin"}, "email"=>"admin@"}, "email"=>"admin@m"}, "email"=>"admin@my"}, "email"=>"admin@mys"}, "email"=>"admin@myst"}, "email"=>"admin@mysto"}, "email"=>"admin@mystor"}, "email"=>"admin@mystore"}, "email"=>"admin@mystore."}, "email"=>"admin@mystore.c"}, "email"=>"admin@mystore.co"}, "email"=>"admin@mystore.com"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :auth
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Unpermitted parameter: :auth
+Completed 201 Created in 129ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 20:28:22 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 20:28:48 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"ad"}, "email"=>"adm"}, "email"=>"admi"}, "email"=>"admin"}, "email"=>"admin@"}, "email"=>"admin@m"}, "email"=>"admin@my"}, "email"=>"admin@mys"}, "email"=>"admin@myst"}, "email"=>"admin@mysto"}, "email"=>"admin@mystor"}, "email"=>"admin@mystore"}, "email"=>"admin@mystore.com"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"ad"}, "email"=>"adm"}, "email"=>"admi"}, "email"=>"admin"}, "email"=>"admin@"}, "email"=>"admin@m"}, "email"=>"admin@my"}, "email"=>"admin@mys"}, "email"=>"admin@myst"}, "email"=>"admin@mysto"}, "email"=>"admin@mystor"}, "email"=>"admin@mystore"}, "email"=>"admin@mystore.com"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :auth
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Unpermitted parameter: :auth
+Completed 201 Created in 121ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 20:28:48 +0530
+Processing by ProductsController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 20:29:34 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 20:30:18 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 20:30:41 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"aa"}, "email"=>"aas"}, "email"=>"aasd"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]", "user_token"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"aa"}, "email"=>"aas"}, "email"=>"aasd"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :auth
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aasd"], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 20:30:52 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"aa"}, "email"=>"aas"}, "email"=>"aasd"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"a", "password"=>"[FILTERED]"}, "email"=>"ad", "password"=>"[FILTERED]"}, "email"=>"adm", "password"=>"[FILTERED]"}, "email"=>"admi", "password"=>"[FILTERED]"}, "email"=>"admin", "password"=>"[FILTERED]"}, "email"=>"admin@", "password"=>"[FILTERED]"}, "email"=>"admin@m", "password"=>"[FILTERED]"}, "email"=>"admin@my", "password"=>"[FILTERED]"}, "email"=>"admin@mys", "password"=>"[FILTERED]"}, "email"=>"admin@myst", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"aa"}, "email"=>"aas"}, "email"=>"aasd"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"aasd", "password"=>"[FILTERED]"}, "email"=>"a", "password"=>"[FILTERED]"}, "email"=>"ad", "password"=>"[FILTERED]"}, "email"=>"adm", "password"=>"[FILTERED]"}, "email"=>"admi", "password"=>"[FILTERED]"}, "email"=>"admin", "password"=>"[FILTERED]"}, "email"=>"admin@", "password"=>"[FILTERED]"}, "email"=>"admin@m", "password"=>"[FILTERED]"}, "email"=>"admin@my", "password"=>"[FILTERED]"}, "email"=>"admin@mys", "password"=>"[FILTERED]"}, "email"=>"admin@myst", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :auth
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Unpermitted parameter: :auth
+Completed 201 Created in 123ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 20:30:54 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 20:31:12 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 20:31:21 +0530
+Processing by ProductsController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for 127.0.0.1 at 2018-08-15 20:31:38 +0530
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"d"}, "email"=>""}, "email"=>"a"}, "email"=>"ad"}, "email"=>"admin@mystore.com"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]", "user_token"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{"auth"=>{}, "email"=>"a"}, "email"=>"d"}, "email"=>""}, "email"=>"a"}, "email"=>"ad"}, "email"=>"admin@mystore.com"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}, "email"=>"admin@mystore.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :auth
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@mystore.com"], ["LIMIT", 1]]
+Unpermitted parameter: :auth
+Completed 201 Created in 123ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 20:31:38 +0530
+Processing by ProductsController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2018-08-15 20:31:40 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+

@@ -50,7 +50,6 @@ class ProductForm extends Component {
     let {productData} = this.state
     productData[name] = value
     this.setState({productData: productData})
-    console.log("thisasasd",this.state.productData)
   }
 
   handleSubmit(e){
