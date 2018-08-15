@@ -28,67 +28,85 @@ import {
 export default class ProductForm extends Component {
   constructor(props) {
     super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.toggleFade = this.toggleFade.bind(this);
     this.state = {
-      collapse: true,
-      fadeIn: true,
-      timeout: 300
+      productData: {
+        productName: '',
+        productPrice: '',
+        productMargin: '',
+        totalSold: ''
+      }
     };
   }
 
-  toggle() {
-    this.setState({ collapse: !this.state.collapse });
+  handleChange = (e) => {
+    let name = e.target.name
+    let value = e.target.value
+    let {productData} = this.state
+    productData[name] = value
+    this.setState({productData: productData})
   }
-
-  toggleFade() {
-    this.setState((prevState) => { return { fadeIn: !prevState }});
-  }
+ 
 
   render() {
+    const {productData} = this.state
     return (
       <div className="animated fadeIn">
         <Row>
           <Col xs="12" sm={{ size: 6, order: 2, offset: 3 }}>
+            <Form>
             <Card>
               <CardHeader>
                 <strong>Create</strong>
-                <small> Company</small>
+                <small> Product</small>
               </CardHeader>
               <CardBody>
                 <FormGroup>
-                  <Label htmlFor="company">Company</Label>
-                  <Input type="text" id="company" placeholder="Enter your company name" />
+                  <Label htmlFor="productName">Product Name</Label>
+                  <Input 
+                    type="text" 
+                    id="productName"
+                    name="productName" 
+                    placeholder="Enter product name"
+                    defaultValue ={productData.productName}
+                    onChange={this.handleChange}
+                    required
+                     />
                 </FormGroup>
                 <FormGroup>
-                  <Label htmlFor="vat">VAT</Label>
-                  <Input type="text" id="vat" placeholder="DE1234567890" />
+                  <Label htmlFor="productPrice">Product Price</Label>
+                  <Input 
+                    type="text" 
+                    id="productPrice" 
+                    name="productPrice"
+                    placeholder="Enter product price"
+                    defaultValue ={productData.productPrice}
+                    onChange={this.handleChange}
+                    />
                 </FormGroup>
                 <FormGroup>
-                  <Label htmlFor="street">Street</Label>
-                  <Input type="text" id="street" placeholder="Enter street name" />
-                </FormGroup>
-                <FormGroup row className="my-0">
-                  <Col xs="8">
-                    <FormGroup>
-                      <Label htmlFor="city">City</Label>
-                      <Input type="text" id="city" placeholder="Enter your city" />
-                    </FormGroup>
-                  </Col>
-                  <Col xs="4">
-                    <FormGroup>
-                      <Label htmlFor="postal-code">Postal Code</Label>
-                      <Input type="text" id="postal-code" placeholder="Postal Code" />
-                    </FormGroup>
-                  </Col>
+                  <Label htmlFor="company">Product Margin(%)</Label>
+                  <Input 
+                  type="text" 
+                  id="productMargin" 
+                  placeholder="Enter product profit margin" 
+                  defaultValue ={productData.productMargin}
+                  onChange={this.handleChange}
+                  />
                 </FormGroup>
                 <FormGroup>
-                  <Label htmlFor="country">Country</Label>
-                  <Input type="text" id="country" placeholder="Country name" />
-                </FormGroup>
-              </CardBody>
-            </Card>
+                  <Label htmlFor="company">Product Units Sold</Label>
+                  <Input 
+                    type="text"
+                    id="totalSold"
+                    placeholder="Enter total units sold"
+                    defaultValue ={productData.totalSold}
+                    onChange={this.handleChange}
+                     />
+                </FormGroup>                
+              </CardBody>   
+              <Button type="submit"> Create </Button>           
+            </Card>            
+            </Form>
           </Col>
         </Row>
       </div>
