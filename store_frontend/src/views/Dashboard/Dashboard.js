@@ -21,35 +21,32 @@ class Dashboard extends Component {
       () => this.props.fetchProducts() 
       )
   }
+
+  returnBoxes = (products) => {
+    console.log("products=======",products)
+    let boxes = products.map((prod,i) =>
+      <Col xs="12" sm="6" lg="3">
+            <Card 
+              className={`text-white ${i% 2 == 0 ? 'bg-danger' : i% 3 == 0 ? 
+                   'bg-info' : 'bg-warning'}`}>
+              <CardBody className="pb-0">
+                <div className="text-value">{prod.name}</div>
+                <div>Total Sold: {prod.total_Sales} </div>
+                <div>Current Price: {prod.price}</div>
+              </CardBody>
+            </Card>
+      </Col>
+      )
+    return boxes
+  }
+
   render() {
     const {products} = this.props
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-info">
-              <CardBody className="pb-0">
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-info">
-              <CardBody className="pb-0">
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-info">
-              <CardBody className="pb-0">
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
-              </CardBody>
-            </Card>
-          </Col>
+         {products.length > 0 ? 
+           this.returnBoxes(products): ''}
         </Row>
         {products.length > 0 ?
           <div>
