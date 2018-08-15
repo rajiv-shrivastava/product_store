@@ -39,6 +39,15 @@ class ProductsController < ApplicationController
     @product.destroy
   end
 
+  def sales
+    @product = Product.find(params[:id])
+    @product.total_sales = @product.total_sales + 1 
+    @product.save
+    render @product
+  end
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product

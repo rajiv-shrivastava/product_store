@@ -15,6 +15,13 @@ export function createProduct(data) {
   };
 }
 
+export function addSales(id) {
+  return {
+    type: 'ADD_PRODUCTSALE',
+    payload: api.get(`/products/sales/${id}`),
+  };
+}
+
 
 export function updateProduct(data) {
   return {

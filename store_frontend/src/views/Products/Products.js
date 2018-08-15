@@ -3,7 +3,7 @@ import { CardGroup, Col, Row,Button } from 'reactstrap';
 import {Link} from 'react-router-dom';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import { fetchProducts} from '../../actions/actionProducts';
+import { fetchProducts,addSales} from '../../actions/actionProducts';
 import { connect } from 'react-redux';
 
  class Products extends Component {
@@ -46,10 +46,11 @@ import { connect } from 'react-redux';
                 to={`/viewproduct/${row.original.id}`}>
                 <i className="fa fa-pencil"> </i>
                </Link> &nbsp;&nbsp;&nbsp;
-               <Link 
-                to={`/viewproduct/${row.original.id}`}>
+               <Button
+                onClick={() => this.handleSales(row.original.id)} 
+                >
                 <i className="fa fa-plus"> </i>
-               </Link> &nbsp;               
+               </Button> &nbsp;               
            </div>
        )
     }]
@@ -67,7 +68,12 @@ import { connect } from 'react-redux';
 
   handleDelete = () => {
 
-    }
+  }
+
+  handleSales = (id) => {
+    console.log(id)
+    this.props.addSales(id)
+  }
 
 
   render() {
@@ -77,7 +83,9 @@ import { connect } from 'react-redux';
             <div className="text-right"> 
             <Link to={'/products/createproduct'}>                
             <Button>
-             <i className="fa fa-plus"> </i> Add New</Button>
+             <i className="fa fa-plus"> </i> 
+             Add New
+             </Button>
             </Link>
             </div>
 
@@ -96,5 +104,5 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps,
-  { fetchProducts}
+  { addSales,fetchProducts}
 )(Products);

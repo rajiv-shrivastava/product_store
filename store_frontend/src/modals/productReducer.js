@@ -2,7 +2,8 @@
 const INITIAL_STATE = { 
 	products: [],
 	createProduct: null,
-	updateProduct: null
+	updateProduct: null,
+  productSale: null
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -22,6 +23,12 @@ export default function (state = INITIAL_STATE, action) {
         ...state, 
         updateProduct: action.payload.data 
       }
+      case `ADD_PRODUCTSALE_SUCCESS`:
+      return { 
+        ...state, 
+        productSale: action.payload.data 
+      }
+      
     default:
       return state;
   }
