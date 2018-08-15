@@ -8,10 +8,11 @@ import {
 import LineChart from './Charts/LineChart'
 import BarChart from './Charts/BarChart'
 import PieChart from './Charts/PieChart'
+import {AUTH_TOKEN} from '../../constants/'
 
 class Dashboard extends Component {
 
-  componentDidMount() {    
+  componentDidMount() {
     this.props.fetchProducts()   
   }
 

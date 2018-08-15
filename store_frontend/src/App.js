@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch,Redirect } from 'react-router-dom';
+import {Router,Route, Switch,Redirect } from 'react-router-dom';
 import './App.css';
 // Styles
 // CoreUI Icons Set
@@ -23,23 +23,37 @@ import { Provider } from 'react-redux';
 import configureStore from './store';
 import history from './history';
 
-
-
 const store = configureStore();
-const Protected = () => <h3>Protected</h3>
+console.log("localStorage",localStorage)
+
+
+const PrivateRoute = ({ component: Component, authed, ...rest }) => (
+  <Route
+    {...rest}
+    render={props => (
+      localStorage.getItem('user_token') !== null
+        ? <Component {...props} />
+        : <Redirect to="/login" />
+    )}
+  />
+);
+
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-      <HashRouter history={history}>
+      <Router history={history}>
         <Switch>
           <Route exact path="/login" name="Login Page" component={Login} />
           <Route exact path="/404" name="Page 404" component={Page404} />
           <Route exact path="/500" name="Page 500" component={Page500} />
-          <Route path="/" name="Home" component={DefaultLayout} />
+          <PrivateRoute 
+           path="/" 
+          component={DefaultLayout} 
+          authed={localStorage.getItem('user_token') !== null} />
         </Switch>
-      </HashRouter>
+      </Router>
       </Provider>
     );
   }

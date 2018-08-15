@@ -17,9 +17,8 @@ class Login extends Component {
   
   handleSubmit(e){
     e.preventDefault()
-    this.props.getToken(this.state).then(() => 
-      this.props.history.push('/dashboard'))
-    }
+    this.props.getToken(this.state)
+  }
 
     handleChange(e) {
       let name = e.target.name

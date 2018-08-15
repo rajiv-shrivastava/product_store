@@ -13,6 +13,15 @@ const propTypes = {
 const defaultProps = {};
 
 class DefaultHeader extends Component {
+  constructor(props){
+    super(props)
+    this.logout = this.logout.bind(this)
+  }
+
+  logout(){
+    localStorage.clear()
+    window.location.reload()
+  }
   render() {
 
     // eslint-disable-next-line
@@ -33,7 +42,9 @@ class DefaultHeader extends Component {
             <DropdownMenu right style={{ right: 'auto' }}>
               <DropdownItem header tag="div" className="text-center"><strong>Account</strong></DropdownItem>
               <DropdownItem divider />
-              <DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem>
+              <DropdownItem onClick={this.logout}><i className="fa fa-lock"></i> 
+              Logout
+              </DropdownItem>
             </DropdownMenu>
           </AppHeaderDropdown>
         </Nav>
