@@ -6,7 +6,7 @@ export default function (state = INITIAL_STATE, action) {
     case `FETCH_PRODUCTS_SUCCESS`:
       return { 
         ...state, 
-        products: action.payload.data.results 
+        products: action.payload.data 
       }
     default:
       return state;

@@ -9871,3 +9871,6 @@ body {
 
 html body .app.flex-row.align-items-center {
   height: 100vh; }
+
+.text-center {
+  text-align: center; }

@@ -5,7 +5,7 @@ import productReducer from './productReducer';
 
 const rootReducer = combineReducers({
   graphs: graphReducer,
-  products: productReducer,
+  product: productReducer,
   auth: authReducer
 });
 

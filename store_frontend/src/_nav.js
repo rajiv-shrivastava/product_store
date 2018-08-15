@@ -58,6 +58,11 @@ export default {
       icon: 'icon-calculator'
     },
     {
+      name: 'Products',
+      url: '/products',
+      icon: 'icon-calculator'
+    },
+    {
       divider: true,
     },
     {

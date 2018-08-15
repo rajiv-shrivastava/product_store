@@ -5,7 +5,6 @@ import {
 } from 'reactstrap';
 import { fetchProducts} from '../../actions/actionProducts';
 import { getToken} from '../../actions/actionAuth';
-
 import { connect } from 'react-redux';
 
 
