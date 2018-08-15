@@ -5,33 +5,30 @@ import {
 } from 'reactstrap';
 import { Bar} from 'react-chartjs-2';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+import {options} from './Options.js'
 
 
-const bar = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  datasets: [
-    {
-      label: 'My First dataset',
-      backgroundColor: 'rgba(255,99,132,0.2)',
-      borderColor: 'rgba(255,99,132,1)',
-      borderWidth: 1,
-      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-      hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [65, 59, 80, 81, 56, 55, 40],
-    },
-  ],
-};
 
-const options = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
-  maintainAspectRatio: false
-}
 
 export default class BarChart extends Component {
   render(){
+      const {products} = this.props
+      let labels = products.map(prod => prod.name)
+      let sales = products.map(prod => prod.total_sales)
+      const bar = {
+      labels:labels,
+      datasets: [
+        {
+          label: 'Total Product Sales',
+          backgroundColor: 'rgba(255,99,132,0.2)',
+          borderColor: 'rgba(255,99,132,1)',
+          borderWidth: 1,
+          hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+          hoverBorderColor: 'rgba(255,99,132,1)',
+          data: sales,
+        },
+      ],
+    };
     return(
         <Card>
             <CardHeader>

@@ -21,6 +21,7 @@ class Dashboard extends Component {
       )
   }
   render() {
+    const {products} = this.props
     return (
       <div className="animated fadeIn">
         <Row>
@@ -49,11 +50,18 @@ class Dashboard extends Component {
             </Card>
           </Col>
         </Row>
-
-        <Row>
-         <LineChart />
-         <BarChart />      
-      </Row>
+        <Row> 
+          <Col sm="10"> 
+           {products.length > 0 ?
+             <LineChart products={products}/> : ''} 
+          </Col> 
+        </Row>
+        <Row> 
+         <Col sm="10">
+         { products.length > 0 ?
+           <BarChart products={products}/> : ''}
+          </Col>
+        </Row>
       </div>
     );
   }
@@ -61,7 +69,7 @@ class Dashboard extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    questions: state.graphs.all || []
+    products: state.product.products || []
   };
 }
 
