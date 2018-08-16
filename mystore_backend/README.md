@@ -4,7 +4,15 @@ Step 1: Install the bundles
 
 > bundle install
 
-Step 2 : Start the server
+Step 2 : Migrate Db
+
+> rails db:migrate
+
+Step 3 : Seed the User
+
+> rake db:seed
+
+Step 4 : Start the server
 
 > rails s
 

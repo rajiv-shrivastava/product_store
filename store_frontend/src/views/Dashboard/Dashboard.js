@@ -24,7 +24,7 @@ class Dashboard extends Component {
                    'bg-info' : 'bg-warning'}`}>
               <CardBody className="pb-0">
                 <div className="text-value">{prod.name}</div>
-                <div>Total Sold: {prod.total_Sales} </div>
+                <div>Total Sold: {prod.total_sales} </div>
                 <div>Current Price: {prod.price}</div>
               </CardBody>
             </Card>
