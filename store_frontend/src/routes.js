@@ -27,6 +27,12 @@ const CreateProduct = Loadable({
   loading: Loading,
 });
 
+
+const CreateProductWithReduxForm = Loadable({
+  loader: () => import('./views/Products/CreateProductWithReduxForm/'),
+  loading: Loading,
+});
+
 const UpdateProduct = Loadable({
   loader: () => import('./views/Products/UpdateProduct/'),
   loading: Loading,
@@ -37,6 +43,7 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/products', exact: true, name: 'Products', component: Products },
   { path: '/products/createproduct', name: 'CreateProduct', component: CreateProduct },
+  { path: '/products/createProductWithReduxForm', name: 'CreateProductWithReduxForm', component: CreateProductWithReduxForm },
   { path: '/products/updateproduct/:id',exact: true, name: 'UpdateProduct', component: UpdateProduct }
 ];
 
