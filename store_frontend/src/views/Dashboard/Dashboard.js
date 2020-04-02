@@ -61,7 +61,7 @@ class Dashboard extends Component {
           </Row>
           </div> 
           : 
-          'Loading....'
+          'User Dashboard'
         }
       </div>
     );

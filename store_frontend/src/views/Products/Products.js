@@ -89,7 +89,7 @@ import { connect } from 'react-redux';
             </Link>
              &nbsp;&nbsp;
 
-            <Link to={'/products/createproductwithreduxform'}>                
+            <Link to={'/products/createproduct2'}>                
             <Button>
              <i className="fa fa-plus"> </i> 
                 Add New With Redux Form
